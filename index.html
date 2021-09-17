@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div>
+            <h1 class="header__title">Страница с постами</h1>
+            <button class="create__post-button" id="create-post">Создать пост</button>
+        </div>
+        <div class="search__container">
+            <input type="text" class="search__input" id="search" placeholder="Поиск товаров ..." onkeyup="myFunction()">
+        </div>
+    </header>
+
+    <main class="main">
+        <h3 class="title__posts">Список постов</h3>
+        <div class="list__posts">
+            <p class="message"></p>
+            <ul class="list" id="list">
+                <li class="item__post" id="0">
+                    <div class="header__post">
+                        <p class="title__post">Lenovo Ideapd 330</p>
+                        <p class="description__post">Цена 5000с</p>
+                    </div>
+                    <div class="delete" id="delete">
+                        <button class="delete__post" id="0" onclick="deletePostItem(this.id)">Удалить</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <div class="service__modal" id="service-modal">
+        <div class="services__modal-content">
+            <h4 class="title__modal">Создание поста</h4>
+            <input type="text" class="title__post-modal input" id="input-title" placeholder="Название"
+                autocomplete="off">
+            <input type="text" class="subtitle__post-modal input" id="input-subtitle" placeholder="Описание"
+                autocomplete="off">
+            <div class="create__button">
+                <button class="create__post-modal" id="create-post-item">Создать</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
